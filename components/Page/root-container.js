@@ -1,4 +1,4 @@
-import {Component, PropTypes} from 'react'
+import React, {Component, PropTypes} from 'react'
 import {EventEmitter} from 'events'
 
 export default class RootContainer extends Component {

@@ -1,4 +1,6 @@
+import React from 'react'
 import Home from './components/Page/home'
+import AsyncPage from './components/Page/async-page'
 
 const routes = [
   {
@@ -7,8 +9,8 @@ const routes = [
   }, {
     path: '/async',
     action: async () => {
-      const data = await new Promise(done => setTimeout(done('hello')))
-      return data && <Home {...data} />
+      const message = await new Promise(done => setTimeout(() => done('hello'), 3000))
+      return message && <AsyncPage message={message} />
     }
   }
 ]

@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from '../UI/layout'
 
-export default class Home extends React.Component {
+export default class AsyncPage extends React.Component {
   render() {
     // console.log(this.props);
     return (
       <Layout>
-        <div>Home</div>
+        <div>{this.props.message}</div>
       </Layout>
     )
   }

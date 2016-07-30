@@ -18,14 +18,9 @@ async function resolve(routes, context) {
     const uri = context.error ? '/error' : context.pathname;
     const params = matchURI(route.path, uri);
     if (!params) continue;
-    return console.log(route);
-
-
     const result = await route.action({ ...context, params });
     if (result) return result;
   }
-  console.log('outside');
-  return
   const error = new Error('Not found');
   error.status = 404;
   throw error;
